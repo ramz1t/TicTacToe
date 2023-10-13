@@ -11,6 +11,10 @@
 		1C59F2F22AB7176E002E53A8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C59F2F12AB7176E002E53A8 /* ContentView.swift */; };
 		1C59F2F42AB7176F002E53A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C59F2F32AB7176F002E53A8 /* Assets.xcassets */; };
 		1C59F2F72AB7176F002E53A8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C59F2F62AB7176F002E53A8 /* Preview Assets.xcassets */; };
+		1C59F2FE2AB7194D002E53A8 /* BoardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C59F2FD2AB7194D002E53A8 /* BoardViewModel.swift */; };
+		1C59F3002AB71986002E53A8 /* SquareModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C59F2FF2AB71986002E53A8 /* SquareModel.swift */; };
+		1C59F3042AB7A233002E53A8 /* BoardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C59F3032AB7A233002E53A8 /* BoardModel.swift */; };
+		1C59F3072AB7A2BE002E53A8 /* SquareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C59F3062AB7A2BE002E53A8 /* SquareView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,10 @@
 		1C59F2F12AB7176E002E53A8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1C59F2F32AB7176F002E53A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1C59F2F62AB7176F002E53A8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1C59F2FD2AB7194D002E53A8 /* BoardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardViewModel.swift; sourceTree = "<group>"; };
+		1C59F2FF2AB71986002E53A8 /* SquareModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareModel.swift; sourceTree = "<group>"; };
+		1C59F3032AB7A233002E53A8 /* BoardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardModel.swift; sourceTree = "<group>"; };
+		1C59F3062AB7A2BE002E53A8 /* SquareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +59,10 @@
 		1C59F2EE2AB7176E002E53A8 /* tictactoe */ = {
 			isa = PBXGroup;
 			children = (
+				1C59F3052AB7A2AB002E53A8 /* Views */,
+				1C59F3022AB7A218002E53A8 /* ViewModels */,
+				1C59F3012AB7A20B002E53A8 /* Models */,
 				1C59F2EF2AB7176E002E53A8 /* tictactoeApp.swift */,
-				1C59F2F12AB7176E002E53A8 /* ContentView.swift */,
 				1C59F2F32AB7176F002E53A8 /* Assets.xcassets */,
 				1C59F2F52AB7176F002E53A8 /* Preview Content */,
 			);
@@ -65,6 +75,32 @@
 				1C59F2F62AB7176F002E53A8 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		1C59F3012AB7A20B002E53A8 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1C59F2FF2AB71986002E53A8 /* SquareModel.swift */,
+				1C59F3032AB7A233002E53A8 /* BoardModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1C59F3022AB7A218002E53A8 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				1C59F2FD2AB7194D002E53A8 /* BoardViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		1C59F3052AB7A2AB002E53A8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1C59F3062AB7A2BE002E53A8 /* SquareView.swift */,
+				1C59F2F12AB7176E002E53A8 /* ContentView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +175,10 @@
 			files = (
 				1C59F2F22AB7176E002E53A8 /* ContentView.swift in Sources */,
 				1C59F2F02AB7176E002E53A8 /* tictactoeApp.swift in Sources */,
+				1C59F3002AB71986002E53A8 /* SquareModel.swift in Sources */,
+				1C59F3072AB7A2BE002E53A8 /* SquareView.swift in Sources */,
+				1C59F3042AB7A233002E53A8 /* BoardModel.swift in Sources */,
+				1C59F2FE2AB7194D002E53A8 /* BoardViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
