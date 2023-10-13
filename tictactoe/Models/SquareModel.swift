@@ -8,14 +8,12 @@
 import Foundation
 
 enum SquareSymbol: String {
-    case empty = ""
     case cross = "xmark"
     case circle = "circle"
 }
 
 struct Square: Hashable, Identifiable {
     let id = UUID()
-    let x: Int
-    let y: Int
-    var symbol: SquareSymbol = .empty
+    let i: Int
+    var symbol: SquareSymbol? = nil
 }

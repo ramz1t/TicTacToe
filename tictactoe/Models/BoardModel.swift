@@ -8,17 +8,13 @@
 import Foundation
 
 struct Board {
-    var squares = [[Square]]()
+    var squares = [Square]()
     
-    mutating func create() {
+    mutating func create(_ size: Int) {
         squares = {
-            var squares = [[Square]]()
-            for i in 0..<3 {
-                var row = [Square]()
-                for j in 0..<3 {
-                    row.append(Square(x: j, y: i))
-                }
-                squares.append(row)
+            var squares = [Square]()
+            for i in 0..<size*size {
+                squares.append(Square(i: i))
             }
             return squares
         }()

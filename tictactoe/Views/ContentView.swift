@@ -15,36 +15,48 @@ struct ContentView: View {
             Text("Tic Tac Toe")
                 .font(.largeTitle)
             
-            VStack {
-                ForEach(gameViewModel.board.squares, id:\.self) { row in
-                    HStack {
-                        ForEach(row) { square in
-                            SquareView(square: square, boardViewModel: gameViewModel)
-                        }
-                    }
-                }
-            }
-            
-            HStack {
-                if gameViewModel.isOver {
-                    Text("Game Over!")
-                } else if gameViewModel.boardIsFull {
-                    Text("No more moves, please restart")
-                } else {
-                    Text("Next move is")
-                    Image(systemName: gameViewModel.isX ? "xmark" : "circle")
-                        .foregroundColor(gameViewModel.isX ? .red : .blue)
-                }
-            }
+            board
+            gameStatus
             
             Button("Start New Game") {
-                gameViewModel.initGame()
+                withAnimation {
+                    gameViewModel.initGame()
+                }
             }
         }
         .onAppear {
             gameViewModel.initGame()
         }
         .bold()
+    }
+    
+    var board: some View {
+        VStack {
+            ForEach(0 ..< gameViewModel.board.squares.count / 3, id: \.self) { rowIndex in
+                HStack {
+                    ForEach(0 ..< 3, id: \.self) { columnIndex in
+                        let index = rowIndex * 3 + columnIndex
+                        if index < gameViewModel.board.squares.count {
+                            SquareView(square: gameViewModel.board.squares[index], boardViewModel: gameViewModel)
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    var gameStatus: some View {
+        HStack {
+            if gameViewModel.isOver {
+                Text("Game Over!")
+            } else if gameViewModel.boardIsFull {
+                Text("No more moves, please restart")
+            } else {
+                Text("Next move is")
+                Image(systemName: gameViewModel.isX ? "xmark" : "circle")
+                    .foregroundColor(gameViewModel.isX ? .red : .blue)
+            }
+        }
     }
 }
 
