@@ -9,32 +9,37 @@ import SwiftUI
 
 struct SquareView: View {
     let square: Square
-    let boardViewModel: GameViewModel
+    let gameViewModel: GameViewModel
+    var active: Bool {
+        !(gameViewModel.isOver || gameViewModel.boardIsFull)
+    }
+    var isWinningPosition: Bool {
+        gameViewModel.winLine.contains(square) && gameViewModel.winner != nil
+    }
+    @Environment(\.colorScheme) var colorScheme
     
     var body: some View {
         VStack {
-            if let image = square.symbol?.rawValue {
-                Image(systemName: image)
-                    .resizable()
+            if square.symbol != nil {
+                SquareSymbolView(symbol: square.symbol)
+                    .font(.system(size: 50))
                     .padding()
+                    .opacity(!(active || isWinningPosition) ? 0.2 : 1)
             } else {
                 Rectangle()
-                    .foregroundColor(.black)
-                    .opacity(0.025)
+                    .foregroundColor(colorScheme == .light ? .white : .black.opacity(0.001))
             }
         }
         .frame(width: 80, height: 80)
-        .foregroundColor(square.symbol == .cross ? .red : .blue)
-        .border(Color.primary.opacity(0.5), width: 2)
+        .border(Color.primary.opacity(!active && isWinningPosition ? 1 : active ? 0.5 : 0.1), width: 2)
         .onTapGesture {
             withAnimation(.easeInOut(duration: 0.075)) {
-                boardViewModel.makeMove(square: square)
+                gameViewModel.makeMove(square: square)
             }
         }
-        
     }
 }
 
 #Preview {
-    SquareView(square: Square(i: 0, symbol: .cross), boardViewModel: GameViewModel())
+    SquareView(square: Square(i: 0, symbol: .cross), gameViewModel: GameViewModel())
 }

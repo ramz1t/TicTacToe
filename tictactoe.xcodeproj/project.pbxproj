@@ -7,23 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C017C012ADAE6A4007B9621 /* SquareSymbolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C017C002ADAE6A4007B9621 /* SquareSymbolView.swift */; };
 		1C59F2F02AB7176E002E53A8 /* tictactoeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C59F2EF2AB7176E002E53A8 /* tictactoeApp.swift */; };
 		1C59F2F22AB7176E002E53A8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C59F2F12AB7176E002E53A8 /* ContentView.swift */; };
 		1C59F2F42AB7176F002E53A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C59F2F32AB7176F002E53A8 /* Assets.xcassets */; };
 		1C59F2F72AB7176F002E53A8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C59F2F62AB7176F002E53A8 /* Preview Assets.xcassets */; };
-		1C59F2FE2AB7194D002E53A8 /* BoardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C59F2FD2AB7194D002E53A8 /* BoardViewModel.swift */; };
+		1C59F2FE2AB7194D002E53A8 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C59F2FD2AB7194D002E53A8 /* GameViewModel.swift */; };
 		1C59F3002AB71986002E53A8 /* SquareModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C59F2FF2AB71986002E53A8 /* SquareModel.swift */; };
 		1C59F3042AB7A233002E53A8 /* BoardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C59F3032AB7A233002E53A8 /* BoardModel.swift */; };
 		1C59F3072AB7A2BE002E53A8 /* SquareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C59F3062AB7A2BE002E53A8 /* SquareView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1C017C002ADAE6A4007B9621 /* SquareSymbolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareSymbolView.swift; sourceTree = "<group>"; };
 		1C59F2EC2AB7176E002E53A8 /* tictactoe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tictactoe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C59F2EF2AB7176E002E53A8 /* tictactoeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tictactoeApp.swift; sourceTree = "<group>"; };
 		1C59F2F12AB7176E002E53A8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1C59F2F32AB7176F002E53A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1C59F2F62AB7176F002E53A8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		1C59F2FD2AB7194D002E53A8 /* BoardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardViewModel.swift; sourceTree = "<group>"; };
+		1C59F2FD2AB7194D002E53A8 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
 		1C59F2FF2AB71986002E53A8 /* SquareModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareModel.swift; sourceTree = "<group>"; };
 		1C59F3032AB7A233002E53A8 /* BoardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardModel.swift; sourceTree = "<group>"; };
 		1C59F3062AB7A2BE002E53A8 /* SquareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareView.swift; sourceTree = "<group>"; };
@@ -89,7 +91,7 @@
 		1C59F3022AB7A218002E53A8 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				1C59F2FD2AB7194D002E53A8 /* BoardViewModel.swift */,
+				1C59F2FD2AB7194D002E53A8 /* GameViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -99,6 +101,7 @@
 			children = (
 				1C59F3062AB7A2BE002E53A8 /* SquareView.swift */,
 				1C59F2F12AB7176E002E53A8 /* ContentView.swift */,
+				1C017C002ADAE6A4007B9621 /* SquareSymbolView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -119,6 +122,8 @@
 			dependencies = (
 			);
 			name = tictactoe;
+			packageProductDependencies = (
+			);
 			productName = tictactoe;
 			productReference = 1C59F2EC2AB7176E002E53A8 /* tictactoe.app */;
 			productType = "com.apple.product-type.application";
@@ -147,6 +152,8 @@
 				Base,
 			);
 			mainGroup = 1C59F2E32AB7176E002E53A8;
+			packageReferences = (
+			);
 			productRefGroup = 1C59F2ED2AB7176E002E53A8 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -178,7 +185,8 @@
 				1C59F3002AB71986002E53A8 /* SquareModel.swift in Sources */,
 				1C59F3072AB7A2BE002E53A8 /* SquareView.swift in Sources */,
 				1C59F3042AB7A233002E53A8 /* BoardModel.swift in Sources */,
-				1C59F2FE2AB7194D002E53A8 /* BoardViewModel.swift in Sources */,
+				1C59F2FE2AB7194D002E53A8 /* GameViewModel.swift in Sources */,
+				1C017C012ADAE6A4007B9621 /* SquareSymbolView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,17 +317,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"tictactoe/Preview Content\"";
 				DEVELOPMENT_TEAM = 2ZD4DPJFV6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Tic Tac Toe";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.puzzle-games";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -338,17 +349,20 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"tictactoe/Preview Content\"";
 				DEVELOPMENT_TEAM = 2ZD4DPJFV6;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Tic Tac Toe";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.puzzle-games";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
