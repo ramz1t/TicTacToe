@@ -41,5 +41,5 @@ struct SquareView: View {
 }
 
 #Preview {
-    SquareView(square: Square(i: 0, symbol: .cross), gameViewModel: GameViewModel())
+    SquareView(square: Square(symbol: .cross), gameViewModel: GameViewModel())
 }

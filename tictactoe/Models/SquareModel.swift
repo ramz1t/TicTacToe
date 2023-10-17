@@ -14,6 +14,5 @@ enum SquareSymbol: String {
 
 struct Square: Hashable, Identifiable {
     let id = UUID()
-    let i: Int
     var symbol: SquareSymbol? = nil
 }

@@ -11,12 +11,9 @@ struct Board {
     var squares = [Square]()
     
     mutating func create(_ size: Int) {
-        squares = {
-            var squares = [Square]()
-            for i in 0..<size*size {
-                squares.append(Square(i: i))
-            }
-            return squares
-        }()
+        squares.removeAll()
+        for _ in 0 ..< size * size {
+            squares.append(Square())
+        }
     }
 }

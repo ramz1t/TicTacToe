@@ -39,7 +39,8 @@ import SwiftUI
         guard square.symbol == nil else { return }
         
         // Changing the square symbol
-        board.squares[square.i].symbol = isX ? .cross : .circle
+        let squareIndex = board.squares.firstIndex(of: square)!
+        board.squares[squareIndex].symbol = isX ? .cross : .circle
         
         var squares = board.squares
         

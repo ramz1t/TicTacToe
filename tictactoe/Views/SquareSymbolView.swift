@@ -23,5 +23,4 @@ struct SquareSymbolView: View {
         SquareSymbolView(symbol: .cross)
         SquareSymbolView(symbol: .circle)
     }
-    
 }
