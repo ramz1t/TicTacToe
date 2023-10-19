@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    var gameViewModel = GameViewModel()
+    @StateObject var gameViewModel = GameViewModel()
     @Environment(\.colorScheme) var colorScheme
     
     var body: some View {

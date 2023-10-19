@@ -11,15 +11,15 @@ import UIKit
 import AudioToolbox
 import SwiftUI
 
-@Observable class GameViewModel {
-    var board = Board()
-    var isX = true
-    var isOver = false
-    var boardIsFull = false
+class GameViewModel: ObservableObject {
+    @Published var board = Board()
+    @Published var isX = true
+    @Published var isOver = false
+    @Published var boardIsFull = false
     var boardSize = 3
-    var winner: SquareSymbol? = nil
-    var winLine = [Square]()
-    var score = [SquareSymbol: Int]()
+    @Published var winner: SquareSymbol? = nil
+    @Published var winLine = [Square]()
+    @Published var score = [SquareSymbol: Int]()
     
     func newRound() {
         isOver = false

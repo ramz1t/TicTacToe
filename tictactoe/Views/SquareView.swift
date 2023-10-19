@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SquareView: View {
     let square: Square
-    let gameViewModel: GameViewModel
+    @StateObject var gameViewModel: GameViewModel
     var active: Bool {
         !(gameViewModel.isOver || gameViewModel.boardIsFull)
     }
