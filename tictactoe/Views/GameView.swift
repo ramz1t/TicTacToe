@@ -1,13 +1,15 @@
 //
-//  ContentView.swift
+//  GameView.swift
 //  tictactoe
 //
 //  Created by Timur Ramazanov on 17.09.2023.
 //
 
 import SwiftUI
+import UIKit
+import AudioToolbox
 
-struct ContentView: View {
+struct GameView: View {
     @StateObject var gameViewModel = GameViewModel()
     @Environment(\.colorScheme) var colorScheme
     
@@ -37,6 +39,18 @@ struct ContentView: View {
             .background(colorScheme == .light ? .white : .white.opacity(0.2))
             .cornerRadius(20)
             .shadow(radius: 25)
+            .onChange(of: gameViewModel.gameState) { state in
+                switch state {
+                case .winnerX, .winnerO:
+                    UINotificationFeedbackGenerator().notificationOccurred(.success)
+                    break
+                case .fullBoard:
+                    UINotificationFeedbackGenerator().notificationOccurred(.error)
+                    break
+                default:
+                    break
+                }
+            }
             
             authorLink
         }
@@ -45,7 +59,7 @@ struct ContentView: View {
     var score: some View {
         HStack {
             SquareSymbolView(symbol: .cross)
-            Text("\(gameViewModel.score[.cross, default: 0]) - \(gameViewModel.score[.circle, default: 0])")
+            Text("\(gameViewModel.scoreX) - \(gameViewModel.scoreO)")
             SquareSymbolView(symbol: .circle)
             Button("Reset") {
                 withAnimation {
@@ -61,12 +75,14 @@ struct ContentView: View {
     
     var board: some View {
         VStack {
-            ForEach(0 ..< gameViewModel.board.squares.count / 3, id: \.self) { rowIndex in
+            ForEach(0 ..< gameViewModel.boardSize, id: \.self) { rowIndex in
                 HStack {
-                    ForEach(0 ..< 3, id: \.self) { columnIndex in
-                        let index = rowIndex * 3 + columnIndex
-                        if index < gameViewModel.board.squares.count {
-                            SquareView(square: gameViewModel.board.squares[index], gameViewModel: gameViewModel)
+                    ForEach(0 ..< gameViewModel.boardSize, id: \.self) { columnIndex in
+                        let index = rowIndex * gameViewModel.boardSize + columnIndex
+                        if index < gameViewModel.board.count {
+                            SquareView(square: gameViewModel.board[index],
+                                       index: index,
+                                       gameViewModel: gameViewModel)
                         }
                     }
                 }
@@ -76,21 +92,31 @@ struct ContentView: View {
     
     var gameStatus: some View {
         HStack {
-            if gameViewModel.isOver {
-                HStack {
-                    Text("Game Over!")
-                    SquareSymbolView(symbol: gameViewModel.winner)
-                    Text("Won!")
-                }
-            } else if gameViewModel.boardIsFull {
+            switch gameViewModel.gameState {
+            case .moveX:
+                Text("Next Move Is")
+                SquareSymbolView(symbol: .cross)
+            case .moveO:
+                Text("Next Move Is")
+                SquareSymbolView(symbol: .circle)
+            case .fullBoard:
                 HStack {
                     SquareSymbolView(symbol: .cross)
                     Text("Draw")
                     SquareSymbolView(symbol: .circle)
                 }
-            } else {
-                Text("Next Move Is")
-                SquareSymbolView(symbol: gameViewModel.isX ? .cross : .circle)
+            case .winnerX:
+                HStack {
+                    Text("Game Over!")
+                    SquareSymbolView(symbol: .cross)
+                    Text("Won!")
+                }
+            case .winnerO:
+                HStack {
+                    Text("Game Over!")
+                    SquareSymbolView(symbol: .circle)
+                    Text("Won!")
+                }
             }
         }
     }
@@ -112,5 +138,5 @@ struct ContentView: View {
 }
 
 #Preview {
-    ContentView()
+    GameView()
 }
