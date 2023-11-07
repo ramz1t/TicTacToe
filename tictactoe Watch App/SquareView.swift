@@ -25,9 +25,7 @@ struct SquareView: View {
                 SquareSymbolView(symbol: square.symbol)
                     .font(.system(.title3))
                     .padding()
-                    .onTapGesture {
-                        gameViewModel.makeMove(index: index)
-                    }
+                    .opacity(!(gameViewModel.gameIsActive || isWinningPosition) ? 0.5 : 1)
             } else {
                 Rectangle()
                     .foregroundColor(.black.opacity(0.001))
@@ -38,6 +36,7 @@ struct SquareView: View {
         .onTapGesture {
             withAnimation(.easeInOut(duration: 0.075)) {
                 gameViewModel.makeMove(index: index)
+                WKInterfaceDevice().play(WKHapticType.click)
             }
         }
         .disabled([GameState.winnerO,

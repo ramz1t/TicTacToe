@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import UIKit
+import WatchKit
 
 struct ContentView: View {
     @ObservedObject var gameViewModel = GameViewModel()
@@ -29,6 +29,18 @@ struct ContentView: View {
                 gameViewModel.newRound()
             }
             .fontDesign(.rounded)
+            .onChange(of: gameViewModel.gameState) { state in
+                switch state {
+                case .winnerX, .winnerO:
+                    WKInterfaceDevice().play(WKHapticType.success)
+                    break
+                case .fullBoard:
+                    WKInterfaceDevice().play(WKHapticType.retry)
+                    break
+                default:
+                    break
+                }
+            }
         }
     }
     
