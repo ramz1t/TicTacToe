@@ -9,14 +9,12 @@ import SwiftUI
 
 struct AboutView: View {
     var body: some View {
-        VStack(spacing: 25) {
-            Spacer()
-            Image(systemName: "swift")
-                .font(.title)
-            Text("Made with ❤️ in 🇸🇪")
+        VStack(alignment: .leading, spacing: 25) {
+            Text("Made by Ramz1 🇸🇪")
             Text("Github: @ramz1t")
-                .bold()
+                
         }
+        .bold()
         .fontDesign(.rounded)
         .navigationTitle("About")
         .navigationBarTitleDisplayMode(.inline)

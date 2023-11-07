@@ -22,14 +22,13 @@ struct ContentView: View {
             .toolbar {
                 toolbar
             }
-            .fullScreenCover(isPresented: $isOpen) {
-                Text("Ramz1")
+            .confirmationDialog("Choose option", isPresented: $isOpen) {
+                resetOptionsSheet
             }
             .onAppear {
                 gameViewModel.newRound()
             }
             .fontDesign(.rounded)
-            
         }
     }
     
@@ -54,9 +53,7 @@ struct ContentView: View {
         Group {
             ToolbarItem(placement: .topBarLeading) {
                 Button {
-                    withAnimation {
-                        gameViewModel.newRound()
-                    }
+                    isOpen = true
                 } label: {
                     Label("Reset", systemImage: "arrow.clockwise")
                 }
@@ -66,6 +63,7 @@ struct ContentView: View {
                     AboutView()
                 } label: {
                     Label("Info", systemImage: "info")
+                        .foregroundStyle(.white)
                 }
             }
             ToolbarItem(placement: .bottomBar) {
@@ -114,6 +112,19 @@ struct ContentView: View {
                         .frame(minWidth: 22)
                     Text("Won!")
                 }
+            }
+        }
+    }
+    
+    @ViewBuilder var resetOptionsSheet: some View {
+        Button("Reset score") {
+            withAnimation {
+                gameViewModel.resetScore()
+            }
+        }
+        Button("New round") {
+            withAnimation {
+                gameViewModel.newRound()
             }
         }
     }
