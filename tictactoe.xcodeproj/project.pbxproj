@@ -8,31 +8,78 @@
 
 /* Begin PBXBuildFile section */
 		1C017C012ADAE6A4007B9621 /* SquareSymbolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C017C002ADAE6A4007B9621 /* SquareSymbolView.swift */; };
+		1C06E57D2AF9A0A40086E609 /* SquareModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C06E57C2AF9A0A40086E609 /* SquareModel.swift */; };
+		1C06E57E2AF9A0A40086E609 /* SquareModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C06E57C2AF9A0A40086E609 /* SquareModel.swift */; };
+		1C06E5802AF9A0CD0086E609 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C06E57F2AF9A0CD0086E609 /* GameViewModel.swift */; };
+		1C06E5812AF9A0CD0086E609 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C06E57F2AF9A0CD0086E609 /* GameViewModel.swift */; };
+		1C58EFD12AF9B0F000CF624C /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C58EFD02AF9B0F000CF624C /* AboutView.swift */; };
 		1C59F2F02AB7176E002E53A8 /* tictactoeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C59F2EF2AB7176E002E53A8 /* tictactoeApp.swift */; };
 		1C59F2F22AB7176E002E53A8 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C59F2F12AB7176E002E53A8 /* GameView.swift */; };
 		1C59F2F42AB7176F002E53A8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C59F2F32AB7176F002E53A8 /* Assets.xcassets */; };
 		1C59F2F72AB7176F002E53A8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C59F2F62AB7176F002E53A8 /* Preview Assets.xcassets */; };
-		1C59F2FE2AB7194D002E53A8 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C59F2FD2AB7194D002E53A8 /* GameViewModel.swift */; };
-		1C59F3002AB71986002E53A8 /* SquareModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C59F2FF2AB71986002E53A8 /* SquareModel.swift */; };
 		1C59F3072AB7A2BE002E53A8 /* SquareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C59F3062AB7A2BE002E53A8 /* SquareView.swift */; };
-		1C733A262AE40D600044AC18 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C733A252AE40D600044AC18 /* GameModel.swift */; };
+		1C7620D42AF9A6B5002A4A43 /* SquareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7620D32AF9A6B5002A4A43 /* SquareView.swift */; };
+		1C7620D62AF9A72C002A4A43 /* SquareSymbolView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7620D52AF9A72C002A4A43 /* SquareSymbolView.swift */; };
+		1CFD6D972AF963DB003C278D /* tictactoeWatchOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CFD6D962AF963DB003C278D /* tictactoeWatchOSApp.swift */; };
+		1CFD6D992AF963DB003C278D /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CFD6D982AF963DB003C278D /* GameView.swift */; };
+		1CFD6D9B2AF963DD003C278D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CFD6D9A2AF963DD003C278D /* Assets.xcassets */; };
+		1CFD6D9E2AF963DD003C278D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CFD6D9D2AF963DD003C278D /* Preview Assets.xcassets */; };
+		1CFD6DA12AF963DD003C278D /* tictactoeWatchOS Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 1CFD6D942AF963DB003C278D /* tictactoeWatchOS Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1CFD6D9F2AF963DD003C278D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1C59F2E42AB7176E002E53A8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1CFD6D932AF963DB003C278D;
+			remoteInfo = "tictactoeWatchOS Watch App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		1CFD6DA52AF963DD003C278D /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				1CFD6DA12AF963DD003C278D /* tictactoeWatchOS Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		1C017C002ADAE6A4007B9621 /* SquareSymbolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareSymbolView.swift; sourceTree = "<group>"; };
+		1C06E57C2AF9A0A40086E609 /* SquareModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareModel.swift; sourceTree = "<group>"; };
+		1C06E57F2AF9A0CD0086E609 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
+		1C58EFD02AF9B0F000CF624C /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		1C59F2EC2AB7176E002E53A8 /* tictactoe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tictactoe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C59F2EF2AB7176E002E53A8 /* tictactoeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tictactoeApp.swift; sourceTree = "<group>"; };
 		1C59F2F12AB7176E002E53A8 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		1C59F2F32AB7176F002E53A8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1C59F2F62AB7176F002E53A8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		1C59F2FD2AB7194D002E53A8 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
-		1C59F2FF2AB71986002E53A8 /* SquareModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareModel.swift; sourceTree = "<group>"; };
 		1C59F3062AB7A2BE002E53A8 /* SquareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareView.swift; sourceTree = "<group>"; };
-		1C733A252AE40D600044AC18 /* GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
+		1C7620D32AF9A6B5002A4A43 /* SquareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareView.swift; sourceTree = "<group>"; };
+		1C7620D52AF9A72C002A4A43 /* SquareSymbolView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareSymbolView.swift; sourceTree = "<group>"; };
+		1CFD6D942AF963DB003C278D /* tictactoeWatchOS Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "tictactoeWatchOS Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1CFD6D962AF963DB003C278D /* tictactoeWatchOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tictactoeWatchOSApp.swift; sourceTree = "<group>"; };
+		1CFD6D982AF963DB003C278D /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		1CFD6D9A2AF963DD003C278D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1CFD6D9D2AF963DD003C278D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		1C59F2E92AB7176E002E53A8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1CFD6D912AF963DB003C278D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -46,7 +93,9 @@
 			isa = PBXGroup;
 			children = (
 				1C59F2EE2AB7176E002E53A8 /* tictactoe */,
+				1CFD6D952AF963DB003C278D /* tictactoeWatchOS Watch App */,
 				1C59F2ED2AB7176E002E53A8 /* Products */,
+				1C9385572AF96DF800915D92 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				1C59F2EC2AB7176E002E53A8 /* tictactoe.app */,
+				1CFD6D942AF963DB003C278D /* tictactoeWatchOS Watch App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -61,9 +111,9 @@
 		1C59F2EE2AB7176E002E53A8 /* tictactoe */ = {
 			isa = PBXGroup;
 			children = (
-				1C59F3052AB7A2AB002E53A8 /* Views */,
-				1C59F3022AB7A218002E53A8 /* ViewModels */,
-				1C59F3012AB7A20B002E53A8 /* Models */,
+				1C59F3062AB7A2BE002E53A8 /* SquareView.swift */,
+				1C59F2F12AB7176E002E53A8 /* GameView.swift */,
+				1C017C002ADAE6A4007B9621 /* SquareSymbolView.swift */,
 				1C59F2EF2AB7176E002E53A8 /* tictactoeApp.swift */,
 				1C59F2F32AB7176F002E53A8 /* Assets.xcassets */,
 				1C59F2F52AB7176F002E53A8 /* Preview Content */,
@@ -79,31 +129,51 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		1C59F3012AB7A20B002E53A8 /* Models */ = {
+		1C7620D12AF9A260002A4A43 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				1C59F2FF2AB71986002E53A8 /* SquareModel.swift */,
-				1C733A252AE40D600044AC18 /* GameModel.swift */,
+				1C06E57C2AF9A0A40086E609 /* SquareModel.swift */,
 			);
-			path = Models;
+			name = Models;
 			sourceTree = "<group>";
 		};
-		1C59F3022AB7A218002E53A8 /* ViewModels */ = {
+		1C7620D22AF9A267002A4A43 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				1C59F2FD2AB7194D002E53A8 /* GameViewModel.swift */,
+				1C06E57F2AF9A0CD0086E609 /* GameViewModel.swift */,
 			);
-			path = ViewModels;
+			name = ViewModels;
 			sourceTree = "<group>";
 		};
-		1C59F3052AB7A2AB002E53A8 /* Views */ = {
+		1C9385572AF96DF800915D92 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1C59F3062AB7A2BE002E53A8 /* SquareView.swift */,
-				1C59F2F12AB7176E002E53A8 /* GameView.swift */,
-				1C017C002ADAE6A4007B9621 /* SquareSymbolView.swift */,
+				1C7620D22AF9A267002A4A43 /* ViewModels */,
+				1C7620D12AF9A260002A4A43 /* Models */,
 			);
-			path = Views;
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1CFD6D952AF963DB003C278D /* tictactoeWatchOS Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				1CFD6D982AF963DB003C278D /* GameView.swift */,
+				1C7620D52AF9A72C002A4A43 /* SquareSymbolView.swift */,
+				1C7620D32AF9A6B5002A4A43 /* SquareView.swift */,
+				1CFD6D962AF963DB003C278D /* tictactoeWatchOSApp.swift */,
+				1CFD6D9A2AF963DD003C278D /* Assets.xcassets */,
+				1CFD6D9C2AF963DD003C278D /* Preview Content */,
+				1C58EFD02AF9B0F000CF624C /* AboutView.swift */,
+			);
+			path = "tictactoeWatchOS Watch App";
+			sourceTree = "<group>";
+		};
+		1CFD6D9C2AF963DD003C278D /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				1CFD6D9D2AF963DD003C278D /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -116,16 +186,37 @@
 				1C59F2E82AB7176E002E53A8 /* Sources */,
 				1C59F2E92AB7176E002E53A8 /* Frameworks */,
 				1C59F2EA2AB7176E002E53A8 /* Resources */,
+				1CFD6DA52AF963DD003C278D /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				1CFD6DA02AF963DD003C278D /* PBXTargetDependency */,
 			);
 			name = tictactoe;
 			packageProductDependencies = (
 			);
 			productName = tictactoe;
 			productReference = 1C59F2EC2AB7176E002E53A8 /* tictactoe.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1CFD6D932AF963DB003C278D /* tictactoeWatchOS Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1CFD6DA22AF963DD003C278D /* Build configuration list for PBXNativeTarget "tictactoeWatchOS Watch App" */;
+			buildPhases = (
+				1CFD6D902AF963DB003C278D /* Sources */,
+				1CFD6D912AF963DB003C278D /* Frameworks */,
+				1CFD6D922AF963DB003C278D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "tictactoeWatchOS Watch App";
+			packageProductDependencies = (
+			);
+			productName = "tictactoeWatchOS Watch App";
+			productReference = 1CFD6D942AF963DB003C278D /* tictactoeWatchOS Watch App.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -140,6 +231,9 @@
 				TargetAttributes = {
 					1C59F2EB2AB7176E002E53A8 = {
 						CreatedOnToolsVersion = 15.0;
+					};
+					1CFD6D932AF963DB003C278D = {
+						CreatedOnToolsVersion = 15.0.1;
 					};
 				};
 			};
@@ -159,6 +253,7 @@
 			projectRoot = "";
 			targets = (
 				1C59F2EB2AB7176E002E53A8 /* tictactoe */,
+				1CFD6D932AF963DB003C278D /* tictactoeWatchOS Watch App */,
 			);
 		};
 /* End PBXProject section */
@@ -173,6 +268,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1CFD6D922AF963DB003C278D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1CFD6D9E2AF963DD003C278D /* Preview Assets.xcassets in Resources */,
+				1CFD6D9B2AF963DD003C278D /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -182,15 +286,36 @@
 			files = (
 				1C59F2F22AB7176E002E53A8 /* GameView.swift in Sources */,
 				1C59F2F02AB7176E002E53A8 /* tictactoeApp.swift in Sources */,
-				1C59F3002AB71986002E53A8 /* SquareModel.swift in Sources */,
 				1C59F3072AB7A2BE002E53A8 /* SquareView.swift in Sources */,
-				1C733A262AE40D600044AC18 /* GameModel.swift in Sources */,
-				1C59F2FE2AB7194D002E53A8 /* GameViewModel.swift in Sources */,
+				1C06E5802AF9A0CD0086E609 /* GameViewModel.swift in Sources */,
+				1C06E57D2AF9A0A40086E609 /* SquareModel.swift in Sources */,
 				1C017C012ADAE6A4007B9621 /* SquareSymbolView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1CFD6D902AF963DB003C278D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C06E5812AF9A0CD0086E609 /* GameViewModel.swift in Sources */,
+				1C58EFD12AF9B0F000CF624C /* AboutView.swift in Sources */,
+				1C7620D42AF9A6B5002A4A43 /* SquareView.swift in Sources */,
+				1C06E57E2AF9A0A40086E609 /* SquareModel.swift in Sources */,
+				1CFD6D992AF963DB003C278D /* GameView.swift in Sources */,
+				1CFD6D972AF963DB003C278D /* tictactoeWatchOSApp.swift in Sources */,
+				1C7620D62AF9A72C002A4A43 /* SquareSymbolView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1CFD6DA02AF963DD003C278D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1CFD6D932AF963DB003C278D /* tictactoeWatchOS Watch App */;
+			targetProxy = 1CFD6D9F2AF963DD003C278D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		1C59F2F82AB7176F002E53A8 /* Debug */ = {
@@ -253,6 +378,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				WATCHOS_DEPLOYMENT_TARGET = 9.1;
 			};
 			name = Debug;
 		};
@@ -309,12 +435,14 @@
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 9.1;
 			};
 			name = Release;
 		};
 		1C59F2FB2AB7176F002E53A8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
@@ -347,6 +475,7 @@
 		1C59F2FC2AB7176F002E53A8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
@@ -376,6 +505,66 @@
 			};
 			name = Release;
 		};
+		1CFD6DA32AF963DD003C278D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"tictactoeWatchOS Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = 2ZD4DPJFV6;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = tictactoeWatchOS;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.ramz1.tictactoe;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ramz1.tictactoe.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Debug;
+		};
+		1CFD6DA42AF963DD003C278D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"tictactoeWatchOS Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = 2ZD4DPJFV6;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = tictactoeWatchOS;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.ramz1.tictactoe;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ramz1.tictactoe.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -393,6 +582,15 @@
 			buildConfigurations = (
 				1C59F2FB2AB7176F002E53A8 /* Debug */,
 				1C59F2FC2AB7176F002E53A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1CFD6DA22AF963DD003C278D /* Build configuration list for PBXNativeTarget "tictactoeWatchOS Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1CFD6DA32AF963DD003C278D /* Debug */,
+				1CFD6DA42AF963DD003C278D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

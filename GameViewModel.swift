@@ -1,42 +1,55 @@
 //
-//  GameModel.swift
+//  GameViewModel.swift
 //  tictactoe
 //
-//  Created by Timur Ramazanov on 21.10.2023.
+//  Created by Timur Ramazanov on 06.11.2023.
 //
 
 import Foundation
 
-enum GameState {
+public enum GameState {
     case moveX, moveO, fullBoard, winnerX, winnerO
 }
 
-struct GameModel {
-    var boardSize = 3
-    var winLine = [Square]()
-    var scoreX = 0
-    var scoreO = 0
-    var gameState: GameState = .moveX
-    var board = [Square]()
+@available(iOS 13.0, *)
+public final class GameViewModel: ObservableObject {
+    @Published public var winLine = [Square]()
+    @Published public var scoreX = 0
+    @Published public var scoreO = 0
+    @Published public var gameState: GameState = .moveX
+    @Published public var board = [Square]()
+    public let boardSize = 3
     
-    mutating func initBoard() {
+    public init(winLine: [Square] = [Square](), scoreX: Int = 0, scoreO: Int = 0, gameState: GameState = .moveX, board: [Square] = [Square]()) {
+        self.winLine = winLine
+        self.scoreX = scoreX
+        self.scoreO = scoreO
+        self.gameState = gameState
+        self.board = board
+    }
+    
+    public var gameIsActive: Bool {
+        gameState == .moveX || gameState == .moveO
+    }
+    
+    private func initBoard() {
         board.removeAll()
         for _ in 0 ..< boardSize * boardSize {
             board.append(Square())
         }
     }
     
-    mutating func newRound() {
+    public func newRound() {
         gameState = .moveX
         initBoard()
     }
     
-    mutating func resetScore() {
+    public func resetScore() {
         scoreX = 0
         scoreO = 0
     }
     
-    mutating func makeMove(index: Int) {
+    public func makeMove(index: Int) {
         // Checking that the move can be done
         guard board[index].symbol == nil else { return }
         
@@ -85,7 +98,7 @@ struct GameModel {
             winLine = []
             
             for x in 0...2 {
-                let square = squares[y * boardSize + x]
+                let square = board[y * boardSize + x]
                 checkSquare(square, &lineSum)
                 winLine.append(square)
             }
@@ -98,7 +111,7 @@ struct GameModel {
         winLine = []
         
         for i in 0...2 {
-            let square = squares[i * boardSize + i]
+            let square = board[i * boardSize + i]
             checkSquare(square, &lineSum)
             winLine.append(square)
         }
@@ -123,10 +136,10 @@ struct GameModel {
         if !board.contains(where: { $0.symbol == nil  }) {
             gameState = .fullBoard
         }
-    
+        
     }
     
-    mutating private func checkSum(_ sum: Int) -> Bool {
+    private func checkSum(_ sum: Int) -> Bool {
         if sum == -boardSize {
             gameState = .winnerX
             scoreX += 1
@@ -153,7 +166,7 @@ struct GameModel {
         }
     }
     
-    func rotateMatrixClockwise(matrix: inout [Square], n: Int) {
+    private func rotateMatrixClockwise(matrix: inout [Square], n: Int) {
         for layer in 0..<n/2 {
             let first = layer
             let last = n - 1 - layer

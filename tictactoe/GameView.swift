@@ -10,7 +10,7 @@ import UIKit
 import AudioToolbox
 
 struct GameView: View {
-    @StateObject var gameViewModel = GameViewModel()
+    @StateObject var gameViewModel = GameViewModel( gameState: .moveX)
     @Environment(\.colorScheme) var colorScheme
     
     var body: some View {
