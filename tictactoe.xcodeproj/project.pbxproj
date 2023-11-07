@@ -93,7 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				1C59F2EE2AB7176E002E53A8 /* tictactoe */,
-				1CFD6D952AF963DB003C278D /* tictactoeWatchOS Watch App */,
+				1CFD6D952AF963DB003C278D /* tictactoe Watch App */,
 				1C59F2ED2AB7176E002E53A8 /* Products */,
 				1C9385572AF96DF800915D92 /* Frameworks */,
 			);
@@ -154,7 +154,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		1CFD6D952AF963DB003C278D /* tictactoeWatchOS Watch App */ = {
+		1CFD6D952AF963DB003C278D /* tictactoe Watch App */ = {
 			isa = PBXGroup;
 			children = (
 				1CFD6D982AF963DB003C278D /* GameView.swift */,
@@ -165,7 +165,7 @@
 				1CFD6D9C2AF963DD003C278D /* Preview Content */,
 				1C58EFD02AF9B0F000CF624C /* AboutView.swift */,
 			);
-			path = "tictactoeWatchOS Watch App";
+			path = "tictactoe Watch App";
 			sourceTree = "<group>";
 		};
 		1CFD6D9C2AF963DD003C278D /* Preview Content */ = {
