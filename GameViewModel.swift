@@ -98,7 +98,7 @@ public final class GameViewModel: ObservableObject {
             winLine = []
             
             for x in 0...2 {
-                let square = board[y * boardSize + x]
+                let square = squares[y * boardSize + x]
                 checkSquare(square, &lineSum)
                 winLine.append(square)
             }
@@ -111,7 +111,7 @@ public final class GameViewModel: ObservableObject {
         winLine = []
         
         for i in 0...2 {
-            let square = board[i * boardSize + i]
+            let square = squares[i * boardSize + i]
             checkSquare(square, &lineSum)
             winLine.append(square)
         }
